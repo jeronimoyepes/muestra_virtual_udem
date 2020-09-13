@@ -1,0 +1,42 @@
+#ecoladrillo {
+    #uses {
+        .side-image {
+            text-align: center;   
+        }img:nth-child(1) {
+            max-width: 210px;
+            margin-right: 10%;
+        }
+        img:nth-child(2) {
+            max-width: 340px;
+        }  
+    }
+    #composition {
+        h2 {
+            margin-bottom: 70px;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    #ecoladrillo {
+        #uses {
+            .side-image {
+                margin: 0;
+                img {
+                    vertical-align:w middle;
+                }
+                img:nth-child(1) {
+                    width: 210px;
+                }
+                img:nth-child(2) {
+                    width: 340px;
+                }     
+            }
+        }
+        #head-interchange {
+            .side-image{
+                max-width: 480px;
+            }
+        }
+    }
+}

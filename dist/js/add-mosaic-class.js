@@ -1,0 +1,1 @@
+// document.querySelector(".mosaic").classList.add("mosaic-general")
