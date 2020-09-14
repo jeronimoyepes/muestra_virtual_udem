@@ -1,0 +1,11 @@
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    #bidireccionales {
+        .advantages .row:nth-child(1) .advantage:nth-child(1) {
+            .big-num {
+                padding-left: 40px;
+                background-color: khaki;
+            }       
+        }
+    }   
+}

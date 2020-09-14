@@ -39,7 +39,7 @@
         }
     }
     .action {
-        width: 270px;
+        width: 280px;
         margin: 70px auto;
         img {
             width: 100%;
@@ -61,7 +61,7 @@
             text-align: center;
             padding: 0 20px;
             font-weight: 400;
-            font-size: 0.9em;
+            font-size: 0.8em;
         }
         .more:hover {
             text-decoration: underline;
@@ -79,8 +79,6 @@
         top: 0;
         width: 100%;
         height: 100%;
-        background: rgb(0,163,165);
-        background: linear-gradient(90deg, rgba(0,163,165,0) 10%, rgba(0,163,165,1) 50%, rgba(0,163,165,0) 90%);
     }
 }
 
@@ -118,6 +116,12 @@
                 margin-bottom: 0;
             }
         }
+        .action {
+            b {
+                display: none;
+            }
+        }
+    
     }
     
 }
