@@ -1,0 +1,31 @@
+
+
+
+
+@media (min-width: 992px) {
+    #control_fugas_gas {
+        #general {
+            h1 {
+                font-size: 3.5em;
+            }
+            .text-cont {
+                vertical-align: middle;
+            }
+            .patent {
+                vertical-align: top;
+            }
+        }
+        .two-column {
+            .text p{
+                img {
+                    margin: 0;
+                    margin-bottom: 10px;
+                }
+            }
+            .text-image {
+                text-align: left;
+            }
+            
+        }
+    }
+}

@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Montserrat:wght@900&display=swap');
 
 
+
 * {
     margin: 0;
     padding: 0;
@@ -78,6 +79,11 @@ h2, h3, h4, .big-num{
 .big-num {
     font-family: 'Montserrat';
     font-size: 6em;
+}
+
+.center-title {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 h2 {
@@ -219,14 +225,12 @@ section {
             a{
                 height: 70px; 
                 margin-bottom: 20px;
-                max-width: 44%;
+                max-width: 210px;
                 display: inline-block;
+                padding: 0 10px;
                 img {
                     width: 100%;
                 }
-            }
-            a:nth-child(1) {
-                margin-right: 30px;
             }
         }
         
@@ -240,8 +244,6 @@ section {
         max-width: 400px;
     }
 }
-
-
 
 .carousel-sec {
     .col:nth-child(2){
@@ -314,12 +316,8 @@ section {
         }
     }
     .text-image {
-        padding: 30px;
-        display: inline;
         text-align: center;
-        img {
-            max-width: 300px;
-        }
+        margin-bottom: 20px;
     }
     .side-image {
         text-align: center;
@@ -342,11 +340,15 @@ section {
     .advantage {
         margin: 0 auto;
         margin-bottom: 30px;
-        max-width: 350px;
+        max-width: 430px;
         padding: 0 30px;
     }
     p{
         text-align: center;
+    }
+    span {
+        display: inline-block;
+        padding-bottom: 10px;
     }
 }
 
@@ -380,34 +382,91 @@ section {
     }
 }
 
+.side-text {
+    p {
+        max-width: 450px;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+}
 
+
+.mosaic {
+    display: grid;
+    grid-template-columns: 1fr;
+    .tile {
+        display: block;
+        height: 420px;
+    }
+    .more {
+        position: absolute;
+        bottom: 40px;
+        right: 28%;
+    }
+}
+
+.mosaic-general {
+    .tile {
+        height: initial;
+    }
+    p, .more {
+        display: none!important;
+    }
+}
+
+.two-column {
+    .text p{
+        margin-bottom: 30px!important;
+        img {
+            margin: 0 auto;
+            display: block;
+            max-width: 55px;
+            margin-bottom: 10px;
+        }
+    } 
+}
+
+.equal-column, .three-column {
+    display: grid;
+    padding: 0 20px;
+    text-align: center;
+    .texto {
+        max-width: 350px;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+    img {
+        margin: 0 auto;
+    }
+}
+
+.three-column {
+    align-items: center;
+    p {
+        margin: 0 auto 10px auto;
+        max-width: 400px;
+    }
+    .column {
+        margin-bottom: 30px;
+    }
+}
+
+.icon-text {
+    display: flex;
+    max-width: 300px;
+    margin: 0 auto;
+    img {
+        margin-right: 10px;
+    }
+}
 
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
     .mosaic {
-        display: grid;
         grid-template-columns: 1fr 1fr;
-        .tile {
-            display: block;
-            height: 420px;
-        }
-        .more {
-            position: absolute;
-            bottom: 40px;
-            right: 28%;
-        }
     }
-    
-    .mosaic-general {
-        .tile {
-            height: initial;
-        }
-        p, .more {
-            display: none!important;
-        }
-    }
-    
     .subtitle {
         display: inline-block;
     }
@@ -471,12 +530,42 @@ section {
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
     
+    .equal-column{
+        text-align: initial;
+        margin: 0 80px;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 150px;
+    }
+
+    .three-column {
+        text-align: initial;
+        margin: 0 80px;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 70px;
+    }
+    
+    .two-column {
+        .text p{
+            img {
+                margin: 0;
+                margin-bottom: 10px;
+            }
+        }
+        .text-image {
+            text-align: left;
+        }
+        
+    }
+    
     .mosaic {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
     
     .margin {
         margin: 0 80px;
+        
+        align-items: initial;
+        
         .row {
             width: 100%;
             display: flex;
@@ -484,16 +573,23 @@ section {
         }
     }
     
+    .side-text {
+        p {
+            text-align: initial;
+            margin: 0;
+            margin-bottom: 10px;
+        }
+    }
+    
     .advantages {
         h2 {
             text-align: initial;
         }
-        .margin {
-            align-items: initial;
-        }
+        
         .advantage {
             display: flex;
-            align-items: flex-start;
+            align-content: flex-start;
+            justify-content: flex-start;
             margin: 0;
             p {
                 text-align: initial;
@@ -506,6 +602,9 @@ section {
             }
         }
     }
+    // .margin {
+    //     justify-content: flex-start;
+    // }
     
     .icon-image {
         width: 90px;
@@ -530,6 +629,9 @@ section {
     
     
     #ar {
+        .margin {
+            flex-direction: row;
+        }
         padding: 200px 0;
         text-align: initial;
         h2 {
@@ -552,6 +654,7 @@ section {
             }
             .store {
                 width: 100%;
+                
             }
         }
         .col:nth-child(2) {
@@ -564,7 +667,7 @@ section {
         font-size: 4em;
     }
     
-
+    
     
     
     
@@ -627,6 +730,12 @@ section {
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
+    
+    .equal-column, .three-column{
+        margin: 50px auto !important;
+        padding: 0 60px;
+        max-width: 1300px
+    }
     
     .mosaic {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
