@@ -4146,13 +4146,12 @@ section {
 #ar .col:first-child .store a {
   height: 70px;
   margin-bottom: 20px;
-  max-width: 210px;
   display: inline-block;
-  padding: 0 10px;
+  padding-right: 10px;
 }
 
 #ar .col:first-child .store a img {
-  width: 100%;
+  height: inherit;
 }
 
 #ar .aricon {
@@ -4366,15 +4365,19 @@ section {
   display: none !important;
 }
 
-.two-column .text p {
-  margin-bottom: 30px !important;
+.two-column p {
+  margin-bottom: 10px !important;
 }
 
-.two-column .text p img {
+.two-column p img {
   margin: 0 auto;
   display: block;
   max-width: 55px;
   margin-bottom: 10px;
+}
+
+.two-column h3 {
+  margin: 0 auto 30px auto;
 }
 
 .equal-column, .three-column {
@@ -4416,10 +4419,11 @@ section {
   display: flex;
   max-width: 300px;
   margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 .icon-text img {
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 @media (min-width: 576px) {
@@ -4489,11 +4493,14 @@ section {
     -webkit-column-gap: 70px;
             column-gap: 70px;
   }
+  .two-column .text {
+    margin: 0;
+  }
   .two-column .text p img {
     margin: 0;
     margin-bottom: 10px;
   }
-  .two-column .text-image {
+  .two-column .text .text-image {
     text-align: left;
   }
   .mosaic {
@@ -4507,6 +4514,7 @@ section {
             align-items: initial;
   }
   .margin .row {
+    margin-bottom: 50px;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4913,4 +4921,8 @@ section {
 
 #colector_particulas .text-image {
   margin: 30px 0;
+}
+
+#refuerzo_suelos h2 {
+  text-align: initial;
 }
