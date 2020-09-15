@@ -1,0 +1,29 @@
+#soporte_panel_solar {
+    #caja {
+        .icon-text {
+            max-width: 400px;
+            align-items: flex-start;
+            
+        }
+
+    }
+    h2 {
+        max-width: 500px;
+        margin: 0 auto 50px auto;
+    }
+}
+@media (min-width: 992px) { 
+    #soporte_panel_solar {
+        #variables {
+            .two-column .col:first-child {
+                margin-right: 50px;
+            }
+            .two-column .col:last-child {
+                width: 60%;
+            }
+        }
+    }
+    h2 {
+        text-align: left;
+    }
+}

@@ -467,6 +467,21 @@ section {
 }
 
 
+.bold {
+    font-weight: 900;
+}
+.italic {
+    font-style: italic;
+}
+
+.center {
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
     .mosaic {
@@ -531,6 +546,8 @@ section {
     }
     
 }
+
+
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {

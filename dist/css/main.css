@@ -4426,6 +4426,21 @@ section {
   margin-right: 20px;
 }
 
+.bold {
+  font-weight: 900;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.center {
+  margin: 0 auto;
+  max-width: 600px;
+  text-align: center;
+  margin-top: 80px;
+}
+
 @media (min-width: 576px) {
   .mosaic {
     -ms-grid-columns: 1fr 1fr;
@@ -4715,6 +4730,10 @@ section {
   }
 }
 
+#home #backhome {
+  display: none;
+}
+
 #home header {
   margin: 0 auto;
   max-width: 1400px;
@@ -4925,4 +4944,53 @@ section {
 
 #refuerzo_suelos h2 {
   text-align: initial;
+}
+
+#soporte_panel_solar #caja .icon-text {
+  max-width: 400px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#soporte_panel_solar h2 {
+  max-width: 500px;
+  margin: 0 auto 50px auto;
+}
+
+@media (min-width: 992px) {
+  #soporte_panel_solar #variables .two-column .col:first-child {
+    margin-right: 50px;
+  }
+  #soporte_panel_solar #variables .two-column .col:last-child {
+    width: 60%;
+  }
+  h2 {
+    text-align: left;
+  }
+}
+
+#madera_prensada #materials .three-column {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  text-align: center;
+}
+
+#madera_prensada #materials .text-image {
+  margin-bottom: 40px;
+}
+
+#madera_prensada .bold {
+  margin-bottom: 0;
+}
+
+#madera_prensada .italic {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 990px) {
+  .text-image {
+    height: 270px;
+  }
 }

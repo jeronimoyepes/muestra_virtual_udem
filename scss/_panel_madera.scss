@@ -1,0 +1,22 @@
+#madera_prensada {
+    #materials {
+        .three-column {
+            align-items: start;
+            text-align: center;
+        }
+        .text-image {
+            margin-bottom: 40px;
+        }
+    }
+    .bold {
+        margin-bottom: 0;
+    }
+    .italic {
+        margin-bottom: 20px;
+    }
+}
+@media (min-width: 990px) {
+    .text-image {
+        height: 270px;
+    }
+}
