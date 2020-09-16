@@ -1,0 +1,123 @@
+#fugas_fluidos {
+    .overflowed {
+        margin: 0 auto;
+        max-width: 1300px;
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        >img {
+            padding: 30px 0;
+            margin: 0 auto;
+            display: block;
+            min-width: 900px;
+        }
+        
+
+        
+    }
+    .drag-ico {
+        width: 120px;
+        display: block;
+        margin: 0px auto 40px auto;
+    }
+    .margin {
+        .text {
+            text-align: center;
+        }
+    } 
+    .mt {
+        margin-top: 200px;
+    } 
+    
+}
+
+.step-controller {
+    ul {
+        display: flex;
+        justify-content: center;
+        li {
+            font-size: 2em;
+            margin-right: 15px;
+            text-align: center;
+            line-height: 50px;
+            width: 50px;
+            height: 50px;
+            border: 3px solid $red;
+            color: $red;
+            font-family: 'Montserrat';
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            cursor: pointer;
+            @include animateAll
+        }
+        li:last-child {
+            margin-right: 0;
+        }
+        li:hover {
+            background-color: $red;
+        color: #ffffff;
+        }
+        .active {
+            background-color: $red;
+            color: #ffffff;
+        }
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.side-num {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    column-gap: 20px;
+    .big-num {
+        font-size: 10em;
+    }
+    p:nth-child(2) {
+        font-size: 1.9em;
+        font-weight: 900;
+        max-width: 280px;
+    }
+}
+
+@media (min-width: 768px) {
+    #general {
+        .margin {
+            margin: 0 40px;
+            display: flex;
+        }
+        .text-cont {
+                    display: block;
+                    max-width: initial;
+                }
+        .info {
+                    text-align: initial;
+                }
+        .patent {
+                    display: block;
+                    max-width: initial;
+                    max-height: 600px;
+                    margin: 0;
+                    margin-bottom: 30px;
+                } 
+            }
+}
+
+@media (min-width: 992px) {
+    #fugas_fluidos {
+        .overflowed {
+            margin-bottom: 40px;
+            >img {
+                padding: 0;
+            }
+        }
+        .drag-ico {
+            display: none;
+        }
+    }
+}
