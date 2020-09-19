@@ -33,10 +33,20 @@
         position: relative;
         overflow: hidden;
         height: 250px;
+        background: url(../img/hub_background.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
     }
     .video {
         position: absolute;
+        z-index: -99;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+
         iframe {
+            display: none;
             width: 768px;
             height: 768px;
         }
@@ -69,12 +79,6 @@
         .more:hover {
             text-decoration: underline;
         }
-    }
-    .video {
-        z-index: -99;
-        top: 50%;
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
     }
     .gradient {
         position: absolute;
@@ -122,6 +126,11 @@
         .action {
             b {
                 display: none;
+            }
+        }
+        .video {
+            iframe {
+                display: initial;
             }
         }
     

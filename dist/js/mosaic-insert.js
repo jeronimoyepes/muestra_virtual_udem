@@ -20,3 +20,19 @@ fetch("_mosaico.html")
       };
     };
   });
+
+
+  // Insertar el link a la store
+document.querySelector(".store a").setAttribute("target", "_blank");
+// document.querySelector(".store a").setAttribute("href", "app.apk");
+
+const links = document.querySelectorAll(".store a");
+console.log(links[0])
+
+for (let i = 0; i < links.length; i++) {
+  links[i].setAttribute("target", "_blank");
+}
+links[1].setAttribute("href", "https://play.google.com/store/apps/details?id=com.UniversidaddeMedellin.PatentesUdeM");
+links[0].remove()
+
+

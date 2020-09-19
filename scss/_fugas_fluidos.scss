@@ -1,27 +1,4 @@
 #fugas_fluidos {
-    .overflowed {
-        margin: 0 auto;
-        max-width: 1300px;
-        overflow: scroll;
-        -webkit-overflow-scrolling: touch;
-        &::-webkit-scrollbar {
-            display: none;
-        }
-        >img {
-            padding: 30px 0;
-            margin: 0 auto;
-            display: block;
-            min-width: 900px;
-        }
-        
-
-        
-    }
-    .drag-ico {
-        width: 120px;
-        display: block;
-        margin: 0px auto 40px auto;
-    }
     .margin {
         .text {
             text-align: center;
@@ -31,6 +8,28 @@
         margin-top: 200px;
     } 
     
+}
+
+.overflowed, .overflowed-plane {
+    margin: 0 auto;
+    max-width: 1300px;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    >img {
+        padding: 30px 0;
+        margin: 0 auto;
+        display: block;
+        min-width: 900px;
+    }   
+}
+
+.drag-ico {
+    width: 120px;
+    display: block;
+    margin: 0px auto 40px auto;
 }
 
 .step-controller {
@@ -86,38 +85,39 @@
 }
 
 @media (min-width: 768px) {
-    #general {
-        .margin {
-            margin: 0 40px;
-            display: flex;
-        }
-        .text-cont {
-                    display: block;
-                    max-width: initial;
-                }
-        .info {
-                    text-align: initial;
-                }
-        .patent {
-                    display: block;
-                    max-width: initial;
-                    max-height: 600px;
-                    margin: 0;
-                    margin-bottom: 30px;
-                } 
+    #fugas_fluidos {
+        #general {
+            .margin {
+                margin: 0 40px;
+                display: flex;
             }
+            .text-cont {
+                        display: block;
+                        max-width: initial;
+                    }
+            .info {
+                        text-align: initial;
+                    }
+            .patent {
+                        display: block;
+                        max-width: initial;
+                        max-height: 600px;
+                        margin: 0;
+                        margin-bottom: 30px;
+                    } 
+                }
+    }
 }
 
 @media (min-width: 992px) {
-    #fugas_fluidos {
-        .overflowed {
-            margin-bottom: 40px;
-            >img {
-                padding: 0;
-            }
+
+    .overflowed, .overflowed-plane  {
+        margin-bottom: 40px;
+        >img {
+            padding: 0;
         }
-        .drag-ico {
-            display: none;
-        }
+    }
+    .drag-ico {
+        display: none;
     }
 }

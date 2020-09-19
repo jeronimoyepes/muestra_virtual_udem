@@ -53,7 +53,7 @@
             font-size: 1em;
             margin-top: 30px;
             border: 2px solid #fff;
-            -webkit-border-radius: 100%px;
+            -webkit-border-radius: 100px;
             border-radius: 100px;
         }
         .more:hover {
@@ -232,7 +232,7 @@ section {
                     height: inherit;
                 }
             }
-
+            
         }
         
     }
@@ -498,6 +498,52 @@ section {
     margin-top: 80px;
 }
 
+.video-margin {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.full-video {
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    video {
+        width: 100%;
+    }
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.portfolio {
+    position: relative;
+    overflow: hidden;
+    max-height: 400px;
+    .action {
+        width: 250px;
+        text-decoration: none;
+        position: absolute;
+        left: 25%;
+        top: 40%;
+        color: $red;
+        @include animateAll;
+        &:hover {
+            top: 35%;
+        }
+    }
+    img {
+        width: 100%;
+    }
+}
+
+
+
+
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
@@ -510,6 +556,11 @@ section {
     .info {
         display: inline-block;
     }
+    .portfolio {
+        .action {
+            left: 30%;
+        }
+    }    
 }
 
 // Medium devices (tablets, 768px and up)
@@ -518,7 +569,11 @@ section {
     .mosaic {
         grid-template-columns: 1fr 1fr 1fr;
     }
-    
+    .portfolio {
+        .action {
+            left: 35%;
+        }
+    } 
     
     .big-num {
         font-size: 8em;
@@ -569,6 +624,11 @@ section {
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
     
+    .portfolio {
+        .action {
+            left: 40%;
+        }
+    } 
     .equal-column{
         text-align: initial;
         margin: 0 80px;
@@ -633,6 +693,9 @@ section {
             align-content: flex-start;
             justify-content: flex-start;
             margin: 0;
+            img {
+                margin: 0 auto;
+            }
             p {
                 text-align: initial;
             }
