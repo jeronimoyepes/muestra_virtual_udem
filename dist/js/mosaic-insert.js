@@ -1,28 +1,30 @@
 fetch("_mosaico.html")
-  .then(response => {
-    return response.text()
-  })
-  .then(data => {
-    // Buscar el div donde se va a insertar
-    document.querySelector("#mosaic-insert").innerHTML = data;
-
-    // Identifica si es la pagina de home o una patente por medio de una clase para aplicar otros estilos
-    if (document.querySelector("#mosaic-insert").classList.contains("add_general_class")) {
-      document.querySelector(".mosaic").classList.add("mosaic-general");
-    }
-
-    // Identificar por medio de una id la patente actual para aplicarle un nuevo estilo
-    tiles = document.querySelectorAll(".mosaic .shadow");
-    for (let i = 0; i < tiles.length; i++) {
-      if (document.querySelector("#mosaic-insert").getAttribute("patent") == tiles[i].getAttribute("id"))
-      {
-        tiles[i].classList.add("active")
-      };
+.then(response => {
+  return response.text()
+})
+.then(data => {
+  // Buscar el div donde se va a insertar
+  document.querySelector("#mosaic-insert").innerHTML = data;
+  
+  // Identifica si es la pagina de home o una patente por medio de una clase para aplicar otros estilos
+  if (document.querySelector("#mosaic-insert").classList.contains("add_general_class")) {
+    document.querySelector(".mosaic").classList.add("mosaic-general");
+  }
+  
+  // Identificar por medio de una id la patente actual para aplicarle un nuevo estilo
+  tiles = document.querySelectorAll(".mosaic .shadow");
+  for (let i = 0; i < tiles.length; i++) {
+    if (document.querySelector("#mosaic-insert").getAttribute("patent") == tiles[i].getAttribute("id"))
+    {
+      tiles[i].classList.add("active")
     };
-  });
+  };
+});
+
+document.querySelector(".full-video iframe").setAttribute("src", document.querySelector(".full-video iframe").getAttribute("v-link"))
 
 
-  // Insertar el link a la store
+// Insertar el link a la store
 document.querySelector(".store a").setAttribute("target", "_blank");
 // document.querySelector(".store a").setAttribute("href", "app.apk");
 
@@ -33,6 +35,6 @@ for (let i = 0; i < links.length; i++) {
   links[i].setAttribute("target", "_blank");
 }
 links[1].setAttribute("href", "https://play.google.com/store/apps/details?id=com.UniversidaddeMedellin.PatentesUdeM");
-links[0].remove()
+links[0].setAttribute("href", "https://apps.apple.com/us/app/id1532893549");
 
 

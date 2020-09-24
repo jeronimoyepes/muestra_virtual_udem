@@ -11,11 +11,16 @@
     font-family: 'lato';
 }
 
+
+
+
 .mosaic {
     max-width: 1400px;
     margin: 0 auto;
     position: relative;
     background-color: $blue;
+    display: grid;
+    grid-template-columns: 1fr;
     .shadow {
         vertical-align: top;
         margin-right: -1px;
@@ -24,6 +29,7 @@
         opacity: 0.2;
     }
     .tile {
+        height: 420px;
         text-decoration: none;
         padding: 30px;
         display: block;
@@ -408,23 +414,11 @@ section {
 }
 
 
-.mosaic {
-    display: grid;
-    grid-template-columns: 1fr;
-    .tile {
-        display: block;
-        height: 420px;
-    }
-    .more {
-        position: absolute;
-        bottom: 40px;
-        right: 28%;
-    }
-}
+
 
 .mosaic-general {
     .tile {
-        height: initial;
+        height: initial!important;
     }
     p, .more {
         display: none!important;
@@ -549,6 +543,14 @@ section {
 @media (min-width: 576px) {
     .mosaic {
         grid-template-columns: 1fr 1fr;
+        .tile {
+            height: 420px;
+        }
+        .more {
+            position: absolute;
+            bottom: 40px;
+            right: 28%;
+        }
     }
     .subtitle {
         display: inline-block;
